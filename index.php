@@ -38,9 +38,19 @@ $hotels =
             'distance_to_center' => 50
         ],
 
-    ];
+];
 
+//var_dump($_GET["parking"]);
+if (!is_null($_GET["parking"]))
+{
+     //echo array_filter($hotels, $hotel["parking"]);
 
+    foreach ($hotels as $hotel)
+    {
+        /* echo array_filter($hotels, $hotel["parking"]); */
+        /* array_filter($hotel, $hotel["parking"]; */
+    }
+}
 ?>
 
 <!doctype html>
@@ -69,7 +79,10 @@ $hotels =
 </head>
 
 <body class='debug'>
-
+    <form action="" method="get">
+        <button type="submit" name="parking">Filter for Hotel with parking</button>
+        <!-- <input type="checkbox" name="parking" id=""> -->
+    </form>
    <div id='app'>
        <?php
         foreach ($hotels as $hotel)
@@ -96,7 +109,6 @@ $hotels =
                     </tbody>
                 </table>
             </div>"."<br>";
-            
         }
        ?>
        
