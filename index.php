@@ -44,7 +44,11 @@ $hotels =
 if (!is_null($_GET["park"]))
 {
     //echo "Park";
-    echo array_filter($hotels, $parking);
+    echo array_filter($hotels, $hotels["parking"]);
+
+    /* foreach ($hotels["parking"] as $result) {
+        echo $result;
+    } */
 
     /* foreach ($hotels as $hotel)
     {
