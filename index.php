@@ -41,15 +41,16 @@ $hotels =
 ];
 
 //var_dump($_GET["parking"]);
-if (!is_null($_GET["parking"]))
+if (!is_null($_GET["park"]))
 {
-     //echo array_filter($hotels, $hotel["parking"]);
+    //echo "Park";
+    echo array_filter($hotels, $parking);
 
-    foreach ($hotels as $hotel)
+    /* foreach ($hotels as $hotel)
     {
-        /* echo array_filter($hotels, $hotel["parking"]); */
-        /* array_filter($hotel, $hotel["parking"]; */
-    }
+        //echo array_filter($hotels, $hotel["parking"]);
+        //array_filter($hotel, $hotel["parking"];
+    } */
 }
 ?>
 
@@ -80,7 +81,7 @@ if (!is_null($_GET["parking"]))
 
 <body class='debug'>
     <form action="" method="get">
-        <button type="submit" name="parking">Filter for Hotel with parking</button>
+        <button type="submit" name="park">Filter for Hotel with parking</button>
         <!-- <input type="checkbox" name="parking" id=""> -->
     </form>
    <div id='app'>
