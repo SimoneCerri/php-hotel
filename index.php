@@ -74,10 +74,34 @@ $hotels =
        <?php
         foreach ($hotels as $hotel)
         {
-            echo "Name: " .$hotel["name"] . "<br>"."Vote: ".$hotel["vote"]."/5"."<br>"."Distance to center: ".$hotel["distance_to_center"]."mt"."<br>"."<br>";
+             /* "Name: " .$hotel["name"] . "<br>"."Vote: ".$hotel["vote"]."/5"."<br>"."Distance to center: ".$hotel["distance_to_center"]."mt"."<br>"."<br>"; */
+            echo "<div
+                class='table-responsive'
+            >
+                <table
+                    class='table table-primary'
+                >
+                    <thead>
+                        <tr>
+                            <th scope='col'>".$hotel['name']."</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class=''>
+                            <td scope='row'>"."Vote: ".$hotel["vote"]."/5"."</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>"."Distance to center: ".$hotel["distance_to_center"]."mt"."</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>"."<br>";
+            
         }
        ?>
+       
    </div>
+   
    <!-- #region Dev-only cdns, disable in production -->
    <!-- #region link to Vue-script -->
    <script src='https: //unpkg.com/vue@3/dist/vue.global.js'></script>
@@ -91,5 +115,12 @@ $hotels =
    <!-- #endregion Dev-only cdns, disable in production -->
 
 </body>
+
+<style>
+    .table 
+    {
+        text-align:center;
+    }
+</style>
 
 </html>
